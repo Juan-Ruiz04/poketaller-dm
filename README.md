@@ -1,66 +1,54 @@
-# @pokedex/poketaller-dm
+### Poketaller DM
 
-## Package info
+## Descripción del Componente
 
-### Package installation
+- * Poketaller DM es un componente de modelo de datos diseñado para gestionar la lógica de negocio de la aplicación Poketaller, específicamente para la carga de Pokémon y sus evoluciones.
 
-Installation using NPM
+## Objetivos del Componente
 
-```bash
-npm install @pokedex/poketaller-dm
-```
+- * Cargar los datos de Pokémon desde la API de PokeAPI.
+- * Manejar la lógica de carga de Pokémon y evoluciones.
+- * Proporcionar los datos de Pokémon y evoluciones a la interfaz de usuario.
 
-### Entry points & exports
+## Métodos
 
-- (Default entry point)
-  - PoketallerDm (Class)
-- poketaller-dm.js
-  - poketaller-dm (Custom Element)
+- * fetchPokemon(): Método que carga los datos de Pokémon desde la API de PokeAPI.
+- * fetchEvolutions(pokemonId): Método que carga las evoluciones de un Pokémon específico.
+- * getEvolutionsWithDetails(chain): Método que obtiene las evoluciones con detalles de un Pokémon.
+- * closeModal(): Método que cierra el modal de evoluciones.
+- * updatePokemonCount(e): Método que actualiza el valor de pokemonCount.
 
+## Propiedades
 
-## PoketallerDm (Class) poketaller-dm (Custom Element) 
+- * pokemonCount: Número de Pokémon a cargar (tipo Number).
+- * pokemons: Lista de Pokémon cargados (tipo Array).
+- * selectedPokemonEvolutions: Lista de evoluciones del Pokémon seleccionado (tipo Array).
+- * showModal: Indicador para mostrar el modal de evoluciones (tipo Boolean).
+- * loading: Indicador de carga (tipo Boolean).
 
-### Extends from
+## Uso
 
-LitElement (lit-element package)
+- * Este componente se utiliza en conjunto con el componente Poketaller UI para cargar y mostrar los datos de Pokémon y evoluciones.
 
-### Usage
+## Dependencias
 
-Import and extend the class:
+- * lit-element
+- * `(link unavailable)
 
-```js
-import { PoketallerDm } from '@pokedex/poketaller-dm';
+## Contribución
 
-class ExampleElement extends PoketallerDm {
-  ...
-}
-```
+- * Para contribuir a este proyecto, por favor sigue los siguientes pasos:
 
-Use the custom element (defined globally):
+1. Clona el repositorio.
+2. Crea una rama para tu contribución.
+3. Realiza tus cambios y commit.
+4. Envía un pull request.
 
-```js
-import '@pokedex/poketaller-dm/poketaller-dm.js';
-```
+Autores
 
-```html
-<poketaller-dm ...>
-  ...
-</poketaller-dm>
-```
+- * Juan LUis Mejia Ruiz
 
-### Description
+## Notas
 
-![LitElement component](https://img.shields.io/badge/litElement-component-blue.svg)
-
-This component ...
-
-Example:
-
-```html
-  <poketaller-dm></poketaller-dm>
-```
-
-### Properties
-
-- **name**: string = "Cells" (attribute: name)
-    Description for property
+- * Este componente utiliza la API de PokeAPI para cargar los datos de Pokémon y evoluciones.
+- * La API de PokeAPI tiene límites de solicitud, por lo que es importante utilizarla de manera responsable.
