@@ -44,7 +44,7 @@
 3. Realiza tus cambios y commit.
 4. Envía un pull request.
 
-Autores
+## Autor
 
 - * Juan LUis Mejia Ruiz
 
