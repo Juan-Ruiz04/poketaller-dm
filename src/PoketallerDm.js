@@ -1,8 +1,7 @@
 import { LitElement, html } from 'lit-element';
 
 export class PoketallerDm extends LitElement {
- 
-  async fetchPokemon() {
+   async fetchPokemon() {
     if (this.pokemonCount < 1 || this.pokemonCount > 1010) {
       alert("Por favor, ingrese un número entre 1 y 1010.");
       return;
@@ -60,7 +59,7 @@ export class PoketallerDm extends LitElement {
     }
     return evolutions;
   }
-
+  
   closeModal() {
     this.showModal = false;
     this.selectedPokemonEvolutions = [];
@@ -69,8 +68,5 @@ export class PoketallerDm extends LitElement {
   updatePokemonCount(e) {
     const newValue = Number(e.target.value);
     this.pokemonCount = isNaN(newValue) ? 20 : newValue;
-  }
-
-
- 
+  } 
 }
